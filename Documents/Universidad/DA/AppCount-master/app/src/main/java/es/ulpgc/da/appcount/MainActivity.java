@@ -1,23 +1,45 @@
 package es.ulpgc.da.appcount;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.os.Bundle;
+
 
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+
+
 public class MainActivity extends Activity {
     private TextView display;
-    private Button boton;
+    private Button botonMas;
+    private Button botonMenos;
     private Integer counter;
+
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+    }
 
     class MyButtonListener implements View.OnClickListener {
 
         @Override
         public void onClick(View view) {
-            counter++;
+
+            switch (view.getId()){
+                case R.id.button1:
+                    counter++;
+                    break;
+                case R.id.button2:
+                    counter--;
+                    break;
+            }
+
             display.setText(counter.toString());
         }
     }
@@ -30,10 +52,12 @@ public class MainActivity extends Activity {
 
         counter = 0;
 
-        boton = (Button) findViewById(R.id.button1);
+        botonMas = (Button) findViewById(R.id.button1);
+        botonMenos = (Button) findViewById(R.id.button2);
         display = (TextView) findViewById(R.id.display);
 
-        boton.setOnClickListener(new MyButtonListener());
+        botonMas.setOnClickListener(new MyButtonListener());
+        botonMenos.setOnClickListener(new MyButtonListener());
 
     }
 }

@@ -10,16 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="es.ulpgc.da.appcount.MainActivity">
 
-    <TextView
-        android:text="0"
-        android:textSize="30pt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="105dp"
-        android:id="@+id/display" />
-
     <Button
         android:text="+"
         android:textSize="30pt"
@@ -29,4 +19,27 @@
         android:id="@+id/button1"
         android:layout_below="@+id/display"
         android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:text="0"
+        android:textSize="30pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:id="@+id/display"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="-"
+        android:textSize="30pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignStart="@+id/button1"
+        android:layout_marginTop="67dp"
+        android:id="@+id/button2" />
+
 </RelativeLayout>
