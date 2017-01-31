@@ -42,7 +42,8 @@ public class PresenterCounter implements I_PresenterCounter {
 
     }
 
-    public static void addButtonPressed() {
+
+    public void addButtonPressed() {
 
     }
 }

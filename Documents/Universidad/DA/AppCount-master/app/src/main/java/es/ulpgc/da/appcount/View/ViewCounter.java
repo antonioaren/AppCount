@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
-import es.ulpgc.da.appcount.Mediator.MediatorCounter;
+import es.ulpgc.da.appcount.Presenter.I_PresenterCounter;
 import es.ulpgc.da.appcount.Presenter.PresenterCounter;
 import es.ulpgc.da.appcount.R;
 
@@ -18,15 +18,15 @@ public class ViewCounter extends Activity implements I_ViewCounter, android.view
     private TextView display;
     private Button botonMas;
     private Button botonMenos;
-    private MediatorCounter mediator;
+//  private MediatorCounter mediator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mediator = MediatorCounter.getInstance();
-        mediator.setViewCounter(this);
+//      mediator = MediatorCounter.getInstance();
+//      mediator.setViewCounter(this);
 
         botonMas = (Button) findViewById(R.id.button1);
         botonMenos = (Button) findViewById(R.id.button2);
@@ -41,7 +41,7 @@ public class ViewCounter extends Activity implements I_ViewCounter, android.view
     public void onClick(android.view.View view) {
         switch (view.getId()){
             case R.id.button1:
-                PresenterCounter.addButtonPressed();
+                
                 break;
             case R.id.button2:
 

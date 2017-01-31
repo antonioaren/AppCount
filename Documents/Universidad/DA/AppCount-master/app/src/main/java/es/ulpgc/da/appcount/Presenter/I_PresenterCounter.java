@@ -5,4 +5,7 @@ package es.ulpgc.da.appcount.Presenter;
  */
 
 public interface I_PresenterCounter {
+
+
+    void addButtonPressed();
 }
