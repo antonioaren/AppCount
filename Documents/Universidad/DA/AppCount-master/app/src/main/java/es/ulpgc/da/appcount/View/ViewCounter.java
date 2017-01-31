@@ -2,6 +2,7 @@ package es.ulpgc.da.appcount.View;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -13,44 +14,47 @@ import es.ulpgc.da.appcount.R;
  * Created by User on 29/01/2017.
  */
 
-public class ViewCounter extends Activity implements I_ViewCounter, android.view.View.OnClickListener {
+public class ViewCounter extends Activity implements View.OnClickListener{
 
     private TextView display;
     private Button botonMas;
     private Button botonMenos;
-//  private MediatorCounter mediator;
+    private PresenterCounter presenter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//      mediator = MediatorCounter.getInstance();
-//      mediator.setViewCounter(this);
-
         botonMas = (Button) findViewById(R.id.button1);
         botonMenos = (Button) findViewById(R.id.button2);
+
         display = (TextView) findViewById(R.id.display);
 
-        botonMas.setOnClickListener(this);
-        botonMenos.setOnClickListener(this);
+        presenter = new PresenterCounter(this);
 
+        botonMas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.addButtonPressed();
+            }
+        });
+
+//        botonMenos.setOnClickListener((new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        }));
     }
 
-    @Override
-    public void onClick(android.view.View view) {
-        switch (view.getId()){
-            case R.id.button1:
-                
-                break;
-            case R.id.button2:
-
-                break;
-        }
-    }
-
-    @Override
     public void Contador(int number){
         this.display.setText(Integer.toString(number));
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }

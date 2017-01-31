@@ -8,6 +8,7 @@ public class ModelCounter implements I_ModelCounter {
 
     private int counter;
 
+
     public ModelCounter(){
         counter = 0;
     }
