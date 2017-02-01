@@ -25,7 +25,11 @@ public class PresenterCounter {
     public void LessButtonPressed() {
         Model.CountDown();
     }
-    public void getResult(){
-        Model.getCounter();
+    public int getResult(){
+        return 0;
     }
+
+
+
+
 }

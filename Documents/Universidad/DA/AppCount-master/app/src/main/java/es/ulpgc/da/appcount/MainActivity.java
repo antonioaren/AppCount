@@ -16,15 +16,6 @@ public class MainActivity extends Activity {
     private Button botonMenos;
     private Integer counter;
 
-    @Override
-    public void onStart() {
-        super.onStart();
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-    }
 
     class MyButtonListener implements View.OnClickListener {
 

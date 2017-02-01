@@ -41,18 +41,11 @@ public class ViewCounter extends Activity{
                 presenter.addButtonPressed();
             }
         });
-
-//        botonMenos.setOnClickListener((new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        }));
     }
 
     public void Display(int number){
-
+        number = presenter.getResult();
+        //display.setText(toString(number));
     }
-
 
 }
