@@ -13,7 +13,7 @@ public class PresenterCounter {
     private ViewCounter View;
 
 
-    public PresenterCounter(ViewCounter viewCounter) {
+    public PresenterCounter() {
         Model = new ModelCounter();
         View = new ViewCounter();
     }

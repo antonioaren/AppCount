@@ -32,7 +32,7 @@ public class ViewCounter extends Activity{
 
         display = (TextView) findViewById(R.id.display);
 
-        presenter = new PresenterCounter(this);
+        presenter = new PresenterCounter();
 
 
         botonMas.setOnClickListener(new View.OnClickListener() {
