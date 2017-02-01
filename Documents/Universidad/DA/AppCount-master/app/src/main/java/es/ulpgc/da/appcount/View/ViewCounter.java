@@ -43,9 +43,8 @@ public class ViewCounter extends Activity{
         });
     }
 
-    public void Display(int number){
-        number = presenter.getResult();
-        //display.setText(toString(number));
+    public void Display(int numero){
+        display.setText(Integer.toString(numero));
     }
 
 }

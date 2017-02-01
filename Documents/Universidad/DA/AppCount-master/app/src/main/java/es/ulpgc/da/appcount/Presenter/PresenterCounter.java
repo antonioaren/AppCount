@@ -21,12 +21,11 @@ public class PresenterCounter {
     public void addButtonPressed() {
         Model.CountUp();
     }
-
     public void LessButtonPressed() {
         Model.CountDown();
     }
-    public int getResult(){
-        return 0;
+    public void getResult(){
+        View.Display(Model.getCounter());
     }
 
 
