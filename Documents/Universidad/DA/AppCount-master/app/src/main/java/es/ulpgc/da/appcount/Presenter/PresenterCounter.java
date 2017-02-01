@@ -10,20 +10,22 @@ import es.ulpgc.da.appcount.View.ViewCounter;
 public class PresenterCounter {
 
     private ModelCounter Model;
-    //private ViewCounter View;
+    private ViewCounter View;
 
 
     public PresenterCounter(ViewCounter viewCounter) {
         Model = new ModelCounter();
+        View = new ViewCounter();
     }
 
     public void addButtonPressed() {
         Model.CountUp();
-        Model.getCounter();
     }
 
     public void LessButtonPressed() {
         Model.CountDown();
+    }
+    public void getResult(){
         Model.getCounter();
     }
 }

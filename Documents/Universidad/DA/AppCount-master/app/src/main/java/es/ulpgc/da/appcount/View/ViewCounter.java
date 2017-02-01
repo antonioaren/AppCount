@@ -34,6 +34,7 @@ public class ViewCounter extends Activity implements View.OnClickListener{
 
         presenter = new PresenterCounter(this);
 
+
         botonMas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,8 +50,8 @@ public class ViewCounter extends Activity implements View.OnClickListener{
 //        }));
     }
 
-    public void Contador(int number){
-        this.display.setText(Integer.toString(number));
+    public void Display(int number){
+
     }
 
     @Override
