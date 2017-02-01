@@ -14,7 +14,7 @@ import es.ulpgc.da.appcount.R;
  * Created by User on 29/01/2017.
  */
 
-public class ViewCounter extends Activity implements View.OnClickListener{
+public class ViewCounter extends Activity{
 
     private TextView display;
     private Button botonMas;
@@ -54,8 +54,5 @@ public class ViewCounter extends Activity implements View.OnClickListener{
 
     }
 
-    @Override
-    public void onClick(View v) {
 
-    }
 }
