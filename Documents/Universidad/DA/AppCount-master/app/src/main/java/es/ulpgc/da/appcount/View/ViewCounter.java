@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import es.ulpgc.da.appcount.Presenter.I_PresenterCounter;
 import es.ulpgc.da.appcount.Presenter.PresenterCounter;
 import es.ulpgc.da.appcount.R;
 
@@ -43,8 +42,8 @@ public class ViewCounter extends Activity{
         });
     }
 
-    public void Display(int numero){
-        display.setText(Integer.toString(numero));
+    public void Display(){
+//       display.setText(Integer.valueOf();
     }
 
 }
