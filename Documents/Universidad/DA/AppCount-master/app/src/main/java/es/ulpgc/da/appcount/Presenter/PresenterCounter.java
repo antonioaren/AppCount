@@ -20,15 +20,7 @@ public class PresenterCounter {
 
     public void addButtonPressed() {
         Model.CountUp();
+        View.Display(Model.getCounter().toString());
     }
-    public void LessButtonPressed() {
-        Model.CountDown();
-    }
-    public void getResult(){
-        View.Display(Model.getCounter());
-    }
-
-
-
 
 }

@@ -34,16 +34,11 @@ public class ViewCounter extends Activity{
         presenter = new PresenterCounter();
 
 
-        botonMas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                presenter.addButtonPressed();
-            }
-        });
+        botonMas.setOnClickListener(v -> presenter.addButtonPressed());
     }
 
-    public void Display(){
-//       display.setText(Integer.valueOf();
+    public void Display(String text){
+       display.setText(text);
     }
 
 }

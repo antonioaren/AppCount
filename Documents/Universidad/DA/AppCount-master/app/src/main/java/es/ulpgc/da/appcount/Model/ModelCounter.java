@@ -6,19 +6,14 @@ package es.ulpgc.da.appcount.Model;
 
 public class ModelCounter implements I_ModelCounter {
 
-    private int counter;
-
+    private Integer counter;
 
     public ModelCounter(){
         counter = 0;
     }
 
-    public int getCounter() {
+    public Integer getCounter() {
         return counter;
-    }
-
-    public void setCounter(int counter) {
-        this.counter = counter;
     }
 
     public void CountUp(){
