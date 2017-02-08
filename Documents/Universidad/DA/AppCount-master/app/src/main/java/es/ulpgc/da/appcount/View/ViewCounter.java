@@ -20,41 +20,30 @@ public class ViewCounter extends Activity{
     private Button botonMenos;
     private PresenterCounter presenter;
 
-
-    class MyButtonListener implements View.OnClickListener{
-
-
-        @Override
-        public void onClick(View view) {
-
-            switch (view.getId()){
-                   case R.id.button1:
-                       presenter.addButtonPressed();
-                       break;
-                   case R.id.button2:
-                       presenter.addButtonPressed();
-                       break;
-               }
-        }
-
-
-    }
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        presenter = new PresenterCounter();
+        presenter = new PresenterCounter(this);
 
         botonMas = (Button) findViewById(R.id.button1);
         botonMenos = (Button) findViewById(R.id.button2);
 
         display = (TextView) findViewById(R.id.display);
 
-        botonMas.setOnClickListener(new MyButtonListener());
-        botonMenos.setOnClickListener(new MyButtonListener());
+        botonMas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.addButtonPressed();
+            }
+        });
+        botonMenos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.addButtonPressed();
+            }
+        });
     }
 
 

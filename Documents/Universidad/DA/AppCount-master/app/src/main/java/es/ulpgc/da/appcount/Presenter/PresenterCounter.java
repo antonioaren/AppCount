@@ -13,13 +13,17 @@ public class PresenterCounter {
     private ViewCounter View;
 
 
-    public PresenterCounter() {
+    public PresenterCounter(ViewCounter viewCounter) {
         Model = new ModelCounter();
-        View = new ViewCounter();
+        View = viewCounter;
     }
 
     public void addButtonPressed() {
         Model.CountUp();
+        View.Display(Model.getCounter().toString());
+    }
+    public void lessButtonPressed(){
+        Model.CountDown();
         View.Display(Model.getCounter().toString());
     }
 
