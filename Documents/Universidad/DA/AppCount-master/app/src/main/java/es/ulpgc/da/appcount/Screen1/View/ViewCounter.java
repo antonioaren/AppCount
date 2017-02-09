@@ -1,4 +1,4 @@
-package es.ulpgc.da.appcount.View;
+package es.ulpgc.da.appcount.Screen1.View;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,7 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import es.ulpgc.da.appcount.Presenter.PresenterCounter;
+import es.ulpgc.da.appcount.Mediator.Mediator;
+import es.ulpgc.da.appcount.Screen1.Presenter.PresenterCounter;
 import es.ulpgc.da.appcount.R;
 
 /**
@@ -18,14 +19,15 @@ public class ViewCounter extends Activity{
     private TextView display;
     private Button botonMas;
     private Button botonMenos;
-    private PresenterCounter presenter;
+    private Mediator mediator;
+    //private PresenterCounter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        presenter = new PresenterCounter(this);
+        //presenter = new PresenterCounter(this);
 
         botonMas = (Button) findViewById(R.id.button1);
         botonMenos = (Button) findViewById(R.id.button2);
@@ -35,13 +37,13 @@ public class ViewCounter extends Activity{
         botonMas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.addButtonPressed();
+                mediator.getPresenter().addButtonPressed();
             }
         });
         botonMenos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.addButtonPressed();
+                mediator.getPresenter().lessButtonPressed();
             }
         });
     }
