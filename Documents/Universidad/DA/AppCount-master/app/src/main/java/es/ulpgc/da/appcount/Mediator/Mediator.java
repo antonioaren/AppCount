@@ -15,6 +15,11 @@ public class Mediator extends Application {
     private PresenterCounter presenter;
     private ModelCounter model;
     private ViewCounter view;
+    private Mediator mediador;
+
+    public Mediator(ViewCounter viewCounter) {
+
+    }
 
     @Override
     public void onCreate() {
@@ -39,7 +44,6 @@ public class Mediator extends Application {
     }
 
     public ViewCounter getView() {
-
         return view;
     }
 

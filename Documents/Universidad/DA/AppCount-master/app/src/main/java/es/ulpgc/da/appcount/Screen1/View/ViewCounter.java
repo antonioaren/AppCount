@@ -28,6 +28,7 @@ public class ViewCounter extends Activity{
         setContentView(R.layout.activity_main);
 
         //presenter = new PresenterCounter(this);
+        mediator = new Mediator(this);
 
         botonMas = (Button) findViewById(R.id.button1);
         botonMenos = (Button) findViewById(R.id.button2);
