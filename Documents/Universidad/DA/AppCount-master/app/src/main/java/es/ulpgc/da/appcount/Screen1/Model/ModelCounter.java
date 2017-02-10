@@ -1,5 +1,7 @@
 package es.ulpgc.da.appcount.Screen1.Model;
 
+import es.ulpgc.da.appcount.Mediator.Mediator;
+
 /**
  * Created by User on 29/01/2017.
  */
@@ -7,8 +9,11 @@ package es.ulpgc.da.appcount.Screen1.Model;
 public class ModelCounter implements I_ModelCounter {
 
     private Integer counter;
+    private Mediator m;
 
-    public ModelCounter(){
+    public ModelCounter(Mediator mediator){
+        this.m = mediator;
+
         counter = 0;
     }
 

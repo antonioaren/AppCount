@@ -20,12 +20,16 @@ public class ViewCounter extends Activity{
     private Button botonMas;
     private Button botonMenos;
     private Mediator mediator;
-    //private PresenterCounter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mediator = (Mediator) getApplication();
+
+        //registro de la vista (this)
+        mediator.registerView(this);
 
         //presenter = new PresenterCounter(this);
         mediator = new Mediator(this);

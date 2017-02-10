@@ -37,7 +37,7 @@ public class Mediator extends Application {
     public ModelCounter getModel() {
         //Lazyinstance
         if (model == null){
-            model = new ModelCounter();
+            model = new ModelCounter(this);
         }
 
         return model;
@@ -45,6 +45,10 @@ public class Mediator extends Application {
 
     public ViewCounter getView() {
         return view;
+    }
+
+    public void registerView (ViewCounter view){
+        this.view =view;
     }
 
 }
