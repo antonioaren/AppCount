@@ -26,7 +26,6 @@ public class ViewCounter extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mediator = new Mediator(this);
         mediator = (Mediator) getApplication();
         mediator.registerView(this);
 
