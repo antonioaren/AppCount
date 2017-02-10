@@ -18,7 +18,7 @@ public class Mediator extends Application {
     private Mediator mediador;
 
     public Mediator(ViewCounter viewCounter) {
-
+        this.view = viewCounter;
     }
 
     @Override

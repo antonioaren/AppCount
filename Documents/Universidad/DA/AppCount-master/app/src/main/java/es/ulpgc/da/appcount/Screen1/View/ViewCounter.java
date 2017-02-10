@@ -26,13 +26,9 @@ public class ViewCounter extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mediator = (Mediator) getApplication();
-
-        //registro de la vista (this)
-        mediator.registerView(this);
-
-        //presenter = new PresenterCounter(this);
         mediator = new Mediator(this);
+        mediator = (Mediator) getApplication();
+        mediator.registerView(this);
 
         botonMas = (Button) findViewById(R.id.button1);
         botonMenos = (Button) findViewById(R.id.button2);
