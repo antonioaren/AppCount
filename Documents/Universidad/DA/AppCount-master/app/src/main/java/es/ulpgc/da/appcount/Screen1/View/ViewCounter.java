@@ -48,8 +48,6 @@ public class ViewCounter extends Activity{
         });
     }
 
-
-
     public void Display(String text){
         display.setText(text);
     }

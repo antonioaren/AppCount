@@ -16,11 +16,6 @@ public class Mediator extends Application {
     private ModelCounter model;
     private ViewCounter view;
 
-
-    public Mediator(ViewCounter viewCounter) {
-        //this.view = viewCounter;
-    }
-
     public Mediator() {
 
     }
@@ -39,7 +34,7 @@ public class Mediator extends Application {
     }
 
     public ModelCounter getModel() {
-        //Lazyinstance
+        //Lazyinstanciation
         if (model == null){
             model = new ModelCounter(this);
         }
